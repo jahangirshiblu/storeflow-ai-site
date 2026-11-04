@@ -1,1 +1,916 @@
 
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101d30">
+<meta name="description" content="StoreFlow AI helps UK e-commerce retailers improve product content, streamline workflows and create digital marketing assets.">
+<title>StoreFlow AI | Smarter E-commerce Solutions</title>
+
+<style>
+:root {
+  --navy: #101d30;
+  --navy2: #192e45;
+  --teal: #32c4a7;
+  --light: #f4f7f8;
+  --text: #243448;
+  --muted: #718093;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  line-height: 1.65;
+}
+
+a { text-decoration: none; }
+
+.container {
+  width: min(1120px, 90%);
+  margin: auto;
+}
+
+/* NAVIGATION */
+
+header {
+  background: var(--navy);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav {
+  min-height: 76px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: white;
+}
+
+.logo span { color: var(--teal); }
+
+.nav-links {
+  display: flex;
+  gap: 26px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #d5dfeb;
+  font-size: 13px;
+}
+
+.nav-links a:hover { color: var(--teal); }
+
+.menu-btn {
+  display: none;
+  border: 1px solid #526579;
+  color: white;
+  background: transparent;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+  background:
+    radial-gradient(circle at 85% 20%, #244e58, transparent 35%),
+    linear-gradient(120deg, var(--navy), #19354a);
+  color: white;
+  padding: 100px 0 85px;
+}
+
+.eyebrow {
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 6vw, 68px);
+  line-height: 1.08;
+  letter-spacing: -2px;
+  max-width: 800px;
+  margin: 22px 0;
+}
+
+.hero p {
+  color: #c7d3df;
+  max-width: 650px;
+  font-size: 17px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 22px;
+  margin-top: 25px;
+  background: var(--teal);
+  color: var(--navy);
+  font-weight: bold;
+  font-size: 13px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.btn:hover { background: #65dfc5; }
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #8191a2;
+  color: white;
+  margin-left: 10px;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  border-top: 1px solid #405267;
+  margin-top: 65px;
+  padding-top: 22px;
+  font-size: 11px;
+  color: #c2d0dd;
+  letter-spacing: 1px;
+}
+
+/* GENERAL SECTIONS */
+
+section { padding: 80px 0; }
+
+.section-title {
+  color: var(--navy);
+  font-size: clamp(30px, 4vw, 43px);
+  line-height: 1.2;
+  margin: 12px 0;
+  letter-spacing: -1px;
+}
+
+.section-intro {
+  color: var(--muted);
+  max-width: 680px;
+  margin-top: 12px;
+}
+
+/* SERVICES */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 38px;
+}
+
+.service-card {
+  padding: 28px;
+  border: 1px solid #e2e8ee;
+  border-radius: 9px;
+  background: white;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px #10243a12;
+}
+
+.service-number {
+  color: #159d88;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.service-card h3 {
+  color: var(--navy);
+  margin: 18px 0 10px;
+  font-size: 20px;
+}
+
+.service-card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* PROCESS */
+
+.process {
+  background: var(--navy);
+  color: white;
+}
+
+.process .section-title { color: white; }
+.process .section-intro { color: #bdcbd8; }
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: 35px;
+}
+
+.process-card {
+  background: var(--navy2);
+  padding: 22px;
+  border-top: 3px solid var(--teal);
+  border-radius: 5px;
+}
+
+.process-card strong {
+  color: var(--teal);
+  font-size: 12px;
+}
+
+.process-card h3 {
+  margin: 12px 0;
+  font-size: 18px;
+}
+
+.process-card p {
+  color: #c4d0dc;
+  font-size: 13px;
+}
+
+/* PORTFOLIO */
+
+.portfolio {
+  background: var(--light);
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 35px;
+}
+
+.portfolio-card {
+  background: white;
+  padding: 28px;
+  border-radius: 9px;
+  border: 1px solid #e1e7ec;
+}
+
+.portfolio-card h3 {
+  color: var(--navy);
+  margin: 12px 0;
+}
+
+.portfolio-card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.demo-label {
+  color: #128a79;
+  font-weight: bold;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+/* PRICING */
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 35px;
+}
+
+.price-card {
+  border: 1px solid #e0e7ec;
+  padding: 25px;
+  border-radius: 9px;
+}
+
+.price-card h3 { color: var(--navy); }
+
+.price {
+  font-size: 36px;
+  font-weight: 800;
+  color: #128f7c;
+  margin: 15px 0;
+}
+
+.price-card p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* FAQ */
+
+.faq { background: var(--light); }
+
+details {
+  padding: 19px 0;
+  border-bottom: 1px solid #dce4e9;
+}
+
+summary {
+  font-weight: bold;
+  color: var(--navy);
+  cursor: pointer;
+}
+
+details p {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* CONTACT */
+
+.contact {
+  background: #eaf5f2;
+  text-align: center;
+}
+
+.contact .section-intro {
+  margin: 15px auto;
+}
+
+.contact-box {
+  background: white;
+  max-width: 650px;
+  margin: 30px auto 0;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 10px 30px #10243a0c;
+}
+
+.contact-box label {
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 15px 0 5px;
+}
+
+.contact-box input,
+.contact-box textarea,
+.contact-box select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d5dee5;
+  border-radius: 5px;
+  font: inherit;
+  background: white;
+}
+
+.contact-box textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.contact-box button { width: 100%; }
+
+.form-note {
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: 12px;
+}
+
+/* FOOTER */
+
+footer {
+  background: #0b1727;
+  color: white;
+  padding: 35px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+footer p {
+  color: #aebdcb;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+/* MOBILE */
+
+@media(max-width: 760px) {
+  .menu-btn { display: block; }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 76px;
+    left: 0;
+    width: 100%;
+    background: var(--navy);
+    padding: 22px 5%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links.open { display: flex; }
+
+  .services-grid,
+  .pricing-grid,
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero { padding: 65px 0; }
+  .hero h1 { letter-spacing: -1px; }
+
+  .hero-stats { gap: 16px; }
+}
+
+@media(max-width: 450px) {
+  .process-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#" class="logo">◈ StoreFlow <span>AI</span></a>
+
+    <button class="menu-btn" id="menuBtn"
+      aria-expanded="false" aria-label="Open navigation">
+      Menu ☰
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#services">Services</a>
+      <a href="#process">Our Process</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container">
+
+    <div class="eyebrow">
+      AI-powered solutions for e-commerce
+    </div>
+
+    <h1>
+      Less repetitive work.
+      More room to grow.
+    </h1>
+
+    <p>
+      We help UK online retailers improve product content,
+      streamline everyday workflows and create better
+      digital experiences using practical AI solutions.
+    </p>
+
+    <a class="btn" href="#contact">
+      DISCUSS YOUR PROJECT ↗
+    </a>
+
+    <a class="btn btn-outline" href="#services">
+      EXPLORE SERVICES
+    </a>
+
+    <div class="hero-stats">
+      <span>01 · CONTENT SYSTEMS</span>
+      <span>02 · BUSINESS AUTOMATION</span>
+      <span>03 · DIGITAL GROWTH</span>
+    </div>
+
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+
+    <div class="eyebrow">WHAT WE DO</div>
+
+    <h2 class="section-title">
+      Practical AI. Real business applications.
+    </h2>
+
+    <p class="section-intro">
+      We focus on useful solutions that help e-commerce
+      teams communicate clearly and manage their
+      operations more effectively.
+    </p>
+
+    <div class="services-grid">
+
+      <article class="service-card">
+        <div class="service-number">
+          01 / CONTENT INTELLIGENCE
+        </div>
+        <h3>AI Content & SEO</h3>
+        <p>
+          Product descriptions, category copy, SEO metadata,
+          editorial content and catalogue optimisation
+          based on verified information.
+        </p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-number">
+          02 / WORKFLOW SYSTEMS
+        </div>
+        <h3>Business Automation</h3>
+        <p>
+          Enquiry capture, lead tracking, repetitive
+          administration workflows and practical
+          AI-assisted business processes.
+        </p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-number">
+          03 / DIGITAL PRESENCE
+        </div>
+        <h3>Video & Marketing</h3>
+        <p>
+          Original video scripts, short-form content,
+          content calendars and marketing assets
+          for online businesses.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="container">
+
+    <div class="eyebrow">OUR APPROACH</div>
+
+    <h2 class="section-title">
+      From everyday challenges to smarter workflows.
+    </h2>
+
+    <p class="section-intro">
+      AI should make business processes more useful,
+      not more complicated. Every project includes
+      human quality checks.
+    </p>
+
+    <div class="process-grid">
+
+      <div class="process-card">
+        <strong>STEP 01</strong>
+        <h3>Discover</h3>
+        <p>Understand the business and its current challenges.</p>
+      </div>
+
+      <div class="process-card">
+        <strong>STEP 02</strong>
+        <h3>Design</h3>
+        <p>Identify a practical solution and define its scope.</p>
+      </div>
+
+      <div class="process-card">
+        <strong>STEP 03</strong>
+        <h3>Implement</h3>
+        <p>Build content and workflows using suitable tools.</p>
+      </div>
+
+      <div class="process-card">
+        <strong>STEP 04</strong>
+        <h3>Optimise</h3>
+        <p>Review quality, test the process and improve it.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="portfolio" id="portfolio">
+  <div class="container">
+
+    <div class="eyebrow">DEMONSTRATION PROJECTS</div>
+
+    <h2 class="section-title">
+      See what smarter digital operations can look like.
+    </h2>
+
+    <div class="portfolio-grid">
+
+      <article class="portfolio-card">
+        <div class="demo-label">ILLUSTRATIVE DEMO 01</div>
+        <h3>Product Content Transformation</h3>
+        <p>
+          Transform verified furniture product specifications
+          into organised descriptions, SEO metadata,
+          feature bullets and useful FAQs.
+        </p>
+      </article>
+
+      <article class="portfolio-card">
+        <div class="demo-label">ILLUSTRATIVE DEMO 02</div>
+        <h3>Enquiry Management System</h3>
+        <p>
+          Capture customer enquiries, organise leads
+          and notify the business owner through
+          a simple automated workflow.
+        </p>
+      </article>
+
+      <article class="portfolio-card">
+        <div class="demo-label">ILLUSTRATIVE DEMO 03</div>
+        <h3>Content Production System</h3>
+        <p>
+          Organise video ideas, scripts, production
+          tasks and publishing schedules.
+        </p>
+      </article>
+
+      <article class="portfolio-card">
+        <div class="demo-label">ILLUSTRATIVE DEMO 04</div>
+        <h3>AI Content Quality Control</h3>
+        <p>
+          Check generated content against verified
+          source information before publication.
+        </p>
+      </article>
+
+    </div>
+
+    <p class="form-note">
+      These are fictional demonstrations, not paid
+      client projects or measured performance results.
+    </p>
+
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="container">
+
+    <div class="eyebrow">INTRODUCTORY PACKAGES</div>
+
+    <h2 class="section-title">
+      Start with a clearly defined project.
+    </h2>
+
+    <div class="pricing-grid">
+
+      <article class="price-card">
+        <h3>Product Page Starter</h3>
+        <div class="price">£79</div>
+        <p>
+          Five product pages, SEO metadata,
+          descriptions, feature bullets and one revision.
+        </p>
+      </article>
+
+      <article class="price-card">
+        <h3>Automation Starter</h3>
+        <div class="price">£149</div>
+        <p>
+          One enquiry form, one lead spreadsheet,
+          owner notifications and setup instructions.
+        </p>
+      </article>
+
+      <article class="price-card">
+        <h3>Video Script Pack</h3>
+        <div class="price">£59</div>
+        <p>
+          One long-form video script,
+          three Shorts scripts and publishing suggestions.
+        </p>
+      </article>
+
+    </div>
+
+    <p class="form-note">
+      Proposed introductory prices in GBP. Scope,
+      revisions and delivery time must be agreed
+      before accepting a project.
+    </p>
+
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+
+    <div class="eyebrow">QUESTIONS & ANSWERS</div>
+
+    <h2 class="section-title">Frequently asked questions</h2>
+
+    <details>
+      <summary>Do you guarantee sales or Google rankings?</summary>
+      <p>
+        No. We focus on deliverables we can control,
+        including content quality, accuracy and
+        agreed workflow implementation.
+      </p>
+    </details>
+
+    <details>
+      <summary>Is all your content automatically generated?</summary>
+      <p>
+        AI can assist with drafting and organisation,
+        but a human reviews the output before delivery.
+      </p>
+    </details>
+
+    <details>
+      <summary>Can you work with small businesses?</summary>
+      <p>
+        Yes. We offer small, clearly scoped introductory
+        projects for growing e-commerce businesses.
+      </p>
+    </details>
+
+    <details>
+      <summary>Are the portfolio examples real clients?</summary>
+      <p>
+        The initial portfolio examples are illustrative
+        demonstrations, not actual client case studies.
+      </p>
+    </details>
+
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+
+    <div class="eyebrow">LET'S START A CONVERSATION</div>
+
+    <h2 class="section-title">
+      Ready to make your business work smarter?
+    </h2>
+
+    <p class="section-intro">
+      Tell us about your product content or workflow
+      challenge. We'll discuss a practical first project.
+    </p>
+
+    <div class="contact-box">
+
+      <form id="enquiryForm">
+
+        <label for="customerName">Your name</label>
+        <input id="customerName" required
+          placeholder="Enter your name">
+
+        <label for="businessName">Business name</label>
+        <input id="businessName" required
+          placeholder="Your company">
+
+        <label for="customerEmail">Email address</label>
+        <input id="customerEmail" type="email" required
+          placeholder="you@company.co.uk">
+
+        <label for="service">Service required</label>
+        <select id="service" required>
+          <option value="">Choose a service</option>
+          <option>AI Content & SEO</option>
+          <option>Business Automation</option>
+          <option>Video & Marketing</option>
+          <option>Not sure yet</option>
+        </select>
+
+        <label for="message">Tell us about your project</label>
+        <textarea id="message" required
+          placeholder="What would you like to improve?"></textarea>
+
+        <button type="submit" class="btn">
+          SEND ENQUIRY ↗
+        </button>
+
+        <p class="form-note" id="formStatus">
+          Your enquiry will open in your email application.
+          No information is stored by this demo website.
+        </p>
+
+      </form>
+
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer-content">
+
+    <div>
+      <a href="#" class="logo">
+        ◈ StoreFlow <span>AI</span>
+      </a>
+      <p>Better content. Smarter operations. Sustainable growth.</p>
+    </div>
+
+    <div>
+      <p>UK e-commerce solutions</p>
+      <p>Website demonstration — not yet published.</p>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+/* BUSINESS SETTINGS
+   Replace these before publishing.
+*/
+
+const CONFIG = {
+  businessEmail: "YOUR_EMAIL_HERE"
+};
+
+/* MOBILE NAVIGATION */
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", function() {
+  const isOpen = navLinks.classList.toggle("open");
+  menuBtn.setAttribute("aria-expanded", isOpen);
+});
+
+navLinks.querySelectorAll("a").forEach(function(link) {
+  link.addEventListener("click", function() {
+    navLinks.classList.remove("open");
+    menuBtn.setAttribute("aria-expanded", "false");
+  });
+});
+
+/* ENQUIRY FORM */
+
+document.getElementById("enquiryForm")
+.addEventListener("submit", function(event) {
+
+  event.preventDefault();
+
+  if (
+    CONFIG.businessEmail === "YOUR_EMAIL_HERE" ||
+    !CONFIG.businessEmail.includes("@")
+  ) {
+    alert("Please configure your real business email first.");
+    return;
+  }
+
+  const name = document.getElementById("customerName").value;
+  const business = document.getElementById("businessName").value;
+  const email = document.getElementById("customerEmail").value;
+  const service = document.getElementById("service").value;
+  const message = document.getElementById("message").value;
+
+  const subject = encodeURIComponent(
+    "New StoreFlow AI enquiry - " + business
+  );
+
+  const body = encodeURIComponent(
+    "Name: " + name + "\n" +
+    "Business: " + business + "\n" +
+    "Email: " + email + "\n" +
+    "Service: " + service + "\n\n" +
+    "Project details:\n" + message
+  );
+
+  window.location.href =
+    "mailto:" + CONFIG.businessEmail +
+    "?subject=" + subject +
+    "&body=" + body;
+
+  document.getElementById("formStatus").textContent =
+    "Your email application should now open with the enquiry prepared. Please send it there.";
+
+});
+</script>
+
+</body>
+</html>
+
